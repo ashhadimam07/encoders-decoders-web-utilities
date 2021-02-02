@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SHA-256 Hash Generator</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header class="header-class">
+        <h1 class="header-title">Encoders/Decoders</h1>
+        <div class="div-class">
+            <nav class="nav">
+                <a href="url.html"><span class="nav-bar">URL<br> Encoder-Decoder</span></a> 
+                <a href="base64.html"><span class="nav-bar">Base64<br> Encoder-Decoder</span></a>
+                <a href="md5.html"><span class="nav-bar">MD5<br> Hash Generator</span></a>
+                <a href="sha1.html"><span class="nav-bar">SHA-1<br> Hash Generator</span></a>
+                <a href="sha256.html"><span class="nav-bar">SHA-256<br> Hash Generator</span></a>
+                <a href="sha512.html"><span class="nav-bar">SHA-512<br> Hash Generator</span></a>
+            </nav>
+        </div>
+    </header>
+    <main>
+        <h2 class="main-heading">SHA-256 Hash Generator</h2>
+        <br>
+        <div>
+            <input type="text" id="encode-str" placeholder="Enter the string to generate hash.">
+            <input type="text" id="generate-str" placeholder="Your results will appear here.">
+        </div>
+        <div>
+            <input type="button" id="hash-generator" class ="button button-position1" value="Encode">
+            <a href="sha256.html"><span class="button button-position2">Start Again</span></a>
+        </div>
+    </main>
+    <footer class="footer">
+        <div class="footer-heading">Utility Tools: Encoders & Decoders</div>
+    </footer>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/crypto-js/3.1.9-1/crypto-js.js"></script>
+    <script>
+        function sha256(str) {
+        const hash = CryptoJS.SHA256(str);
+        const sha256Hash = hash.toString(CryptoJS.enc.Hex);
+        return sha256Hash;
+        }
+        const inputtext = document.querySelector('#encode-str');
+        const outputtext = document.querySelector('#generate-str');
+        const hashvalue = document.querySelector('#hash-generator');
+        hashvalue.addEventListener('click', () => {
+        outputtext.value = sha256(inputtext.value);
+        });
+    </script>
+</body>
+</html>
