@@ -23,12 +23,16 @@
     <main>
         <h2 class="main-heading">URL Encode/Decode</h2>
         <br>
-        <div>
-            <input type="text" id="encode-url" placeholder="Enter the url to encode or decode.">
-            <input type="text" id="decode-url" placeholder="Your results will appear here.">
+        <div class="div-wrapper">
+            <div class="div-input">
+                <input type="text" id="encode-url" class="div-input-text" placeholder="Enter the url to encode or decode.">
+            </div>
+            <div class="div-output">
+                <input type="text" id="decode-url" class="div-output-text" placeholder="Your results will appear here.">
+            </div>
         </div>
-        <div>
-            <input type="button" id="encoder" class ="button button-position1" value="Encode">
+        <div class="button-wrapper">
+            <input type="button" id="encoder" class ="button" value="Encode">
             <input type="button" id="decoder" class ="button button-position2" value="Decode">
             <a href="index.html"><span class="button button-position2">Start Again</span></a>
         </div>

@@ -23,12 +23,16 @@
     <main>
         <h2 class="main-heading">MD5 Hash Generator</h2>
         <br>
-        <div>
-            <input type="text" id="encode-str" placeholder="Enter the string to generate hash.">
-            <input type="text" id="generate-str" placeholder="Your results will appear here.">
+        <div class="div-wrapper">
+            <div class="div-input">
+                <input type="text" id="encode-str" class="div-input-text" placeholder="Enter the string to encode or decode.">
+            </div>
+            <div class="div-output">
+                <input type="text" id="generate-str" class="div-output-text" placeholder="Your results will appear here.">
+            </div> 
         </div>
-        <div>
-            <input type="button" id="hash-generator" class ="button button-position3" value="Generate">
+        <div class="button-wrapper">
+            <input type="button" id="hash-generator" class ="button" value="Generate">
             <a href="md5.html"><span class="button button-position2">Start Again</span></a>
         </div>
     </main>

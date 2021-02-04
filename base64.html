@@ -23,12 +23,16 @@
     <main>
         <h2 class="main-heading">Base64 Encode/Decode</h2>
         <br>
-        <div>
-            <input type="text" id="encode-str" placeholder="Enter the string to encode or decode.">
-            <input type="text" id="decode-str" placeholder="Your results will appear here.">
+        <div class="div-wrapper">
+            <div class="div-input">
+                <input type="text" id="encode-str" class="div-input-text" placeholder="Enter the string to encode or decode.">
+            </div>
+            <div class="div-output">
+                <input type="text" id="decode-str" class="div-output-text" placeholder="Your results will appear here.">
+            </div> 
         </div>
-        <div>
-            <input type="button" id="base64encoder" class ="button button-position1" value="Encode">
+        <div class="button-wrapper">
+            <input type="button" id="base64encoder" class ="button" value="Encode">
             <input type="button" id="base64decoder" class ="button button-position2" value="Decode">
             <a href="base64.html"><span class="button button-position2">Start Again</span></a>
         </div>
