@@ -5,39 +5,37 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Md5 Hash Generator</title>
     <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
 </head>
 <body>
-    <header class="header-class">
-        <h1 class="header-title">Encoders/Decoders</h1>
-        <div class="div-class">
-            <nav class="nav">
-                <a href="index.html"><span class="nav-bar">URL<br> Encoder-Decoder</span></a> 
-                <a href="base64.html"><span class="nav-bar">Base64<br> Encoder-Decoder</span></a>
-                <a href="md5.html"><span class="nav-bar">MD5<br> Hash Generator</span></a>
-                <a href="sha1.html"><span class="nav-bar">SHA-1<br> Hash Generator</span></a>
-                <a href="sha256.html"><span class="nav-bar">SHA-256<br> Hash Generator</span></a>
-                <a href="sha512.html"><span class="nav-bar">SHA-512<br> Hash Generator</span></a>
-            </nav>
-        </div>
+    <header>
+        <a href="index.html" class="logo">Encoder-Decoder</a>
+        <span class="menu-toggle"><i  class="fa" aria-hidden="true"></i></span>
+        <nav>
+            <ul>
+                <li><a href="https://utility-web-tools.netlify.app" class="active">Home</a></li>
+                <li><a href="index.html">URL Encoder</a></li>
+                <li><a href="base64.html">Base64 Encoder</a></li>
+                <li><a href="/">MD5 Hash</a></li>
+                <li><a href="sha1.html">SHA1 Hash</a></li>
+                <li><a href="sha256.html">SHA256 Hash</a></li>
+                <li><a href="sha512.html">SHA512 Hash</a></li>
+            </ul>
+        </nav>
+        <div class="clearfix"></div>
     </header>
     <main>
-        <h2 class="main-heading">MD5 Hash Generator</h2>
-        <br>
+        <h2 class="main-heading">MD5 Hash</h2>
         <div class="div-wrapper">
-            <div class="div-input">
-                <input type="text" id="encode-str" class="div-input-text" spellcheck="false" placeholder="Enter the string to encode or decode.">
-            </div>
-            <div class="div-output">
-                <input type="text" id="generate-str" class="div-output-text" placeholder="Your results will appear here.">
-            </div> 
+            <input type="text" id="encode-str" class="div-input-text" spellcheck="false" placeholder="Enter the string.">
+            <input type="text" id="generate-str" class="div-output-text" readonly placeholder="Hash results.">
         </div>
         <div class="button-wrapper">
             <input type="button" id="hash-generator" class ="button" value="Generate">
-            <a href="md5.html"><span class="button button-position2">Start Again</span></a>
         </div>
     </main>
     <footer class="footer">
-        <div class="footer-heading">Utility Tools: Encoders & Decoders</div>
+        <div class="footer-heading">WEB TOOLS: MD5 HASH</div>
     </footer>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/crypto-js/3.1.9-1/crypto-js.js"></script>
     <script>
@@ -52,6 +50,16 @@
         hashvalue.addEventListener('click', () => {
         outputtext.value = md5(inputtext.value);
         });
+    </script>
+    <script src="https://code.jquery.com/jquery-3.5.1.js" integrity="sha256-QWo7LDvxbWT2tbbQ97B53yJnYU3WhH/C8ycbRAkjPDc=" 
+    crossorigin="anonymous"></script>
+    <script type="text/javascript">
+        $(document).ready(function() {
+            $('.menu-toggle').click(function() {
+                $('.menu-toggle').toggleClass('active')
+                $('nav').toggleClass('active')
+            })
+        })
     </script>
 </body>
 </html>
